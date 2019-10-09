@@ -9,5 +9,6 @@ RUN npm run build
 # this step uses a new base image and just copies everything from the build folder to the 
 # folder in nginx that it serves from
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
